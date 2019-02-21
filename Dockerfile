@@ -10,6 +10,8 @@ LABEL   org.label-schema.schema-version="1.0" \
 
 COPY . /app
 COPY ./templates /templates
+COPY requirements.txt requirements.txt
+
 WORKDIR /app
 WORKDIR /templates
 
