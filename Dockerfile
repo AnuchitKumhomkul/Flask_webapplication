@@ -13,6 +13,7 @@ COPY ./templates /templates
 WORKDIR /app
 WORKDIR /templates
 
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt && pip install gunicorn==19.9.0
 
 CMD ["gunicorn", "-w 4", "main:app"]
