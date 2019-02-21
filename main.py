@@ -30,7 +30,7 @@ def insert():
         return redirect(url_for("index"))
 
 @app.route("/update", methods=['POST'])
-def insert():
+def update():
     if request.method == "POST":
         id_update = request.form['id']
         fname = request.form['fname']
