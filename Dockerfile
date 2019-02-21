@@ -8,12 +8,9 @@ LABEL   org.label-schema.schema-version="1.0" \
         org.label-schema.build-date="${BUILD_DATE}" \
         maintainer="anuchit17219@gmail.com"
 
-COPY . /app
-COPY ./templates /templates
-COPY requirements.txt requirements.txt
+COPY requirements.txt /app/requirements.txt
 
 WORKDIR /app
-WORKDIR /templates
 
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
